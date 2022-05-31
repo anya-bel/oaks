@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>OAKS | Online App for Knowledge Substantiations</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/carousel/">
+   
+    <!-- JQuery -->
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    
+
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/bootstrap-social.css" rel="stylesheet">
+    <link href="../static/css/font-awesome.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="../static/css/carousel.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a href="#home"><img id=logo src="https://github.com/e-lubrini/oaks/blob/main/img/logos/logo_w.png?raw=true" alt="OAKS" class="nav-link active" aria-current="page"></a>
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#features_anchor">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#team_anchor">About Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <div id="home" class="carousel slide" data-bs-ride="carousel">
+    <!--<div class="carousel-indicators">
+      <button type="button" data-bs-target="#home" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#home" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#home" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>-->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"></svg>
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Get your facts straight!</h1>
+            <p>Try our Online App for Knowledge Substantiation</p>
+            <button onClick="document.getElementById('url_anchor').scrollIntoView();" class="btn btn-lg btn-show nav-link" type="button" data-toggle="collapse" data-target="#url_form" aria-expanded="false" aria-controls="url_form">
+              Check an article
+            </button>
+          </div>
+        </div>
+      </div>
+  </div>
+  
+  <div id="url_form" class="collapse">
+    <a id="url_anchor" class="anchor"></a>
+    {% from '_formhelpers.html' import render_field %}
+    <div id=url_card class="card card-body">
+      <form action="{{ url_for('handle_data') }}" method="post">
+        <div class="form-group">
+          <!-- <label for="URL">Article URL</label> -->
+          <input name=url type="url" class="form-control" id="URL" aria-describedby="URLHelp" placeholder="Enter URL">
+          <!-- <small id="URLHelp" class="form-text text-muted">Paste your URL here..</small> -->
+          <button type="submit" class="btn btn-primary">Check</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div id='features' class="container-marketing">
+    <a id="features_anchor" class="anchor"></a>
+
+
+    <!-- START THE FEATURETTES -->
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Are you getting <span class="text-muted">real information?</span></h2>
+        <p class="lead">Check how likely you are to be reading fake news. Are the sources credible? Is it a piece of propaganda? Are the claims founded? <br>Discover in one click!</p>
+      </div>
+      <div class="col-md-5">
+        <svg id=feature1 class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"></svg>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Have a look at some <span class="text-muted">advanced instights</span></h2>
+        <p class="lead">Take a peek at how our algorithm works and why it thinks your news sources are lying! Feel free to check all the stats to better understand our results. </p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <svg id=feature2 class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"></svg>
+      </div>
+    </div>
+
+  </div><!-- /.container -->
+
+  <div id='team' class="container-marketing">
+    <a id="team_anchor" class="anchor"></a>
+      <!-- /END THE FEATURETTES -->
+    <!-- Three columns of text below the carousel -->
+    <div id='team-row' class="row">
+      <h2 class="section-heading">Our Team</h2>
+      <div class="col-lg-4">
+        <svg id='elisa' class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+          <!--<rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>--></svg>
+
+        <h2>Elisa Lubrini</h2>
+        <p>Research Intern @ Plant Health Institute of Montpellier</p>
+        <a class="btn btn-social-icon btn-linkedin" href='https://www.linkedin.com/in/elisalubrini/' target=”_blank”>
+          <span class="fa fa-linkedin"></span></a>
+        <a class="btn btn-social-icon btn-github" href='https://github.com/e-lubrini/' target=”_blank”>
+            <span class="fa fa-github"></span></a>
+            <a class="btn btn-social-icon btn-google" href='mailto:lubrinie@gmail.com'>
+              <span class="fa fa-google"></span></a>  
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <svg id='anna' class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+          <!--<rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>--></svg>
+
+        <h2>Anna Mosolova</h2>
+        <p>Computational linguist, Master's student at Université de Lorraine</p>
+        <a class="btn btn-social-icon btn-linkedin" href='https://www.linkedin.com/in/anna-mosolova-5a06a51bb/' target=”_blank”>
+          <span class="fa fa-linkedin"></span></a>
+        <a class="btn btn-social-icon btn-github" href='https://github.com/anya-bel' target=”_blank”>
+            <span class="fa fa-github"></span></a>   
+        <a class="btn btn-social-icon btn-google" href='mailto:a.mosolova333@gmail.com'>
+            <span class="fa fa-google"></span></a>        
+      </div><!-- /.col-lg-4 -->
+ 
+    </div><!-- /.row -->
+
+  </div><!-- /.container -->
+
+  <hr class="featurette-divider">
+
+  <!-- FOOTER -->
+  <footer id=footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>&copy; 2022 Elisa Lubrini <!--&middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a>--></p>
+  </footer>
+</main>  
+  </body>
+</html>
