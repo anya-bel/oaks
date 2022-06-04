@@ -1,0 +1,15 @@
+{
+"manifest_version": 2,
+
+  "name": "OAKS",
+  "description": "Online App for Knowledge Substantiation",
+  "version": "1.0",
+
+  "browser_action": {
+   "default_icon": "/static/img/logos/logo_g.png",
+   "default_popup": "/templates/popup.html"
+  },
+  "permissions": [
+   "activeTab"
+   ]
+}

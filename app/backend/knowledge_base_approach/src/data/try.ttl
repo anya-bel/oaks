@@ -1,0 +1,15 @@
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#sample_1>
+        a       <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Sample> ;
+        <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith>
+                <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#thing_1> ;
+        <http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#hasDeterminer>
+                <http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#a> , <http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#this> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#thing_1>
+        a       <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#SampleSentence> , <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#SampleSentence>
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Sentence> ;
+        <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith>
+                <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Sample> .
